@@ -37,3 +37,5 @@ docker-compose.yml
 # Documentation files
 *.md
 docs/
+.env.docker 
+.env
