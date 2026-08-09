@@ -1,0 +1,41 @@
+services:
+  backend:
+    build:
+      context: ./backend/
+      dockerfile: Dockerfile
+    container_name: campus-navigation-backend
+    env_file:
+      - ./backend/.env.docker
+    restart: unless-stopped
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/docs')"
+        ]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    networks:
+      - campus-internal
+  frontend:
+    build:
+      context: ./frontend/
+      dockerfile: Dockerfile
+    container_name: campus-navigation-frontend 
+    env_file:
+      - ./frontend/.env.local
+    restart: unless-stopped
+    networks:
+      - campus-internal
+      - reverse-proxy_net
+
+networks:
+  campus-internal:
+    driver: bridge
+
+  reverse-proxy_net:
+    external: true
