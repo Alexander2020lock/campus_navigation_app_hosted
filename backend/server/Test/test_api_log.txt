@@ -1,7 +1,7 @@
 === TEST SUITE LOG: test_api_log.txt ===
 
 ============================================================
-TIMESTAMP   : 2026-08-09T16:24:14.114312
+TIMESTAMP   : 2026-08-09T17:33:44.651244
 TESTED ROUTE: GET /load_svg
 REQUEST DATA:
 {
@@ -14,7 +14,7 @@ RESPONSE:
 ============================================================
 
 ============================================================
-TIMESTAMP   : 2026-08-09T16:24:14.124414
+TIMESTAMP   : 2026-08-09T17:33:44.657408
 TESTED ROUTE: GET /teachers
 REQUEST DATA: None
 STATUS CODE : 200
@@ -1387,6 +1387,12 @@ RESPONSE:
     "cabin_no": null,
     "room_no": "T510",
     "phone_number": "9994115629"
+  },
+  {
+    "name": "Dr. Test Teacher",
+    "cabin_no": "G-999",
+    "room_no": "101",
+    "phone_number": "1234567890"
   },
   {
     "name": "Dr. Test Teacher",

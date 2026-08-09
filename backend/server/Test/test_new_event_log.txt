@@ -1,7 +1,7 @@
 === TEST SUITE LOG: test_new_event_log.txt ===
 
 ============================================================
-TIMESTAMP   : 2026-08-09T16:24:31.618932
+TIMESTAMP   : 2026-08-09T17:33:59.793865
 TESTED ROUTE: POST /user/register
 REQUEST DATA:
 {
@@ -17,7 +17,7 @@ RESPONSE:
 ============================================================
 
 ============================================================
-TIMESTAMP   : 2026-08-09T16:24:31.702035
+TIMESTAMP   : 2026-08-09T17:33:59.877672
 TESTED ROUTE: POST /user/login
 REQUEST DATA:
 {
@@ -28,14 +28,14 @@ STATUS CODE : 200
 RESPONSE:
 {
   "message": "Login successful",
-  "last_login": "2026-08-09T16:24:31.689578",
-  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2IiwiZXhwIjoxNzg2Mjc0NjcxfQ.JtNjziWt3GVBgkE9UCC2U8X2jLN4aH-efZIHg9PMCsQ",
+  "last_login": "2026-08-09T17:33:59.864690",
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2IiwiZXhwIjoxNzg2Mjc4ODM5fQ.NLtwUqouyuPWy6XwhAZgjAy14CPRV3poyaVZP70S6P0",
   "token_type": "bearer"
 }
 ============================================================
 
 ============================================================
-TIMESTAMP   : 2026-08-09T16:24:31.714305
+TIMESTAMP   : 2026-08-09T17:33:59.891400
 TESTED ROUTE: POST /user/events/
 REQUEST DATA:
 {
@@ -51,39 +51,39 @@ REQUEST DATA:
 STATUS CODE : 201
 RESPONSE:
 {
-  "id": "b1cbf322-b239-4c97-b3b8-d7f9d6f961b1",
+  "id": "ccf30570-5058-445a-b7c0-66348d531543",
   "title": "Async Test Event",
   "date": "2025-05-01",
   "time": "10:00",
   "location": "Async City",
   "capacity": 100,
   "description": "An event created using async tests",
-  "created_at": "2026-08-09T16:24:31.703459",
+  "created_at": "2026-08-09T17:33:59.879392",
   "user_id": 6
 }
 ============================================================
 
 ============================================================
-TIMESTAMP   : 2026-08-09T16:24:31.729406
-TESTED ROUTE: POST /events/b1cbf322-b239-4c97-b3b8-d7f9d6f961b1/register
+TIMESTAMP   : 2026-08-09T17:33:59.905478
+TESTED ROUTE: POST /events/ccf30570-5058-445a-b7c0-66348d531543/register
 REQUEST DATA:
 {
   "attendee_name": "Async John",
-  "attendee_email": "john_async_a209e6@example.com"
+  "attendee_email": "john_async_6a6c7e@example.com"
 }
 STATUS CODE : 201
 RESPONSE:
 {
   "message": "Registration successful",
   "event": {
-    "id": "b1cbf322-b239-4c97-b3b8-d7f9d6f961b1",
+    "id": "ccf30570-5058-445a-b7c0-66348d531543",
     "title": "Async Test Event",
     "date": "2025-05-01",
     "time": "10:00",
     "location": "Async City",
     "capacity": 100,
     "description": "An event created using async tests",
-    "created_at": "2026-08-09T16:24:31.703459",
+    "created_at": "2026-08-09T17:33:59.879392",
     "user_id": 6,
     "registered": 1
   }
@@ -91,8 +91,8 @@ RESPONSE:
 ============================================================
 
 ============================================================
-TIMESTAMP   : 2026-08-09T16:24:31.743766
-TESTED ROUTE: DELETE /user/events/b1cbf322-b239-4c97-b3b8-d7f9d6f961b1
+TIMESTAMP   : 2026-08-09T17:33:59.919420
+TESTED ROUTE: DELETE /user/events/ccf30570-5058-445a-b7c0-66348d531543
 REQUEST DATA: None
 STATUS CODE : 200
 RESPONSE:
