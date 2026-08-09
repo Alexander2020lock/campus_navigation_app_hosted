@@ -1,7 +1,7 @@
 === TEST SUITE LOG: test_event_management_log.txt ===
 
 ============================================================
-TIMESTAMP   : 2026-08-09T17:33:58.754062
+TIMESTAMP   : 2026-08-09T16:24:30.208420
 TESTED ROUTE: POST /user/register
 REQUEST DATA:
 {
@@ -17,7 +17,7 @@ RESPONSE:
 ============================================================
 
 ============================================================
-TIMESTAMP   : 2026-08-09T17:33:58.840285
+TIMESTAMP   : 2026-08-09T16:24:30.299440
 TESTED ROUTE: POST /user/login
 REQUEST DATA:
 {
@@ -28,14 +28,14 @@ STATUS CODE : 200
 RESPONSE:
 {
   "message": "Login successful",
-  "last_login": "2026-08-09T17:33:58.826284",
-  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNiIsImV4cCI6MTc4NjI3ODgzOH0.6zCC43SiyXa7EsSnFmfkPwofMz-Bus6Nz2G5644Kj9Y",
+  "last_login": "2026-08-09T16:24:30.287464",
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNiIsImV4cCI6MTc4NjI3NDY3MH0.NwD3N2OvIoV4TZdMUdmTyoAYTqXHTP6C7QBEKvJPfJQ",
   "token_type": "bearer"
 }
 ============================================================
 
 ============================================================
-TIMESTAMP   : 2026-08-09T17:33:58.842903
+TIMESTAMP   : 2026-08-09T16:24:30.301176
 TESTED ROUTE: GET /events/
 REQUEST DATA: None
 STATUS CODE : 200
@@ -51,13 +51,13 @@ RESPONSE:
     "description": "A cybersecurity Hackathon",
     "created_at": "2025-11-09T18:08:47.625062",
     "user_id": 3,
-    "registered": 4
+    "registered": 3
   }
 ]
 ============================================================
 
 ============================================================
-TIMESTAMP   : 2026-08-09T17:33:58.844850
+TIMESTAMP   : 2026-08-09T16:24:30.303041
 TESTED ROUTE: GET /user/events/
 REQUEST DATA: None
 STATUS CODE : 200
@@ -66,7 +66,7 @@ RESPONSE:
 ============================================================
 
 ============================================================
-TIMESTAMP   : 2026-08-09T17:33:58.860370
+TIMESTAMP   : 2026-08-09T16:24:30.316657
 TESTED ROUTE: POST /user/events/
 REQUEST DATA:
 {
@@ -80,41 +80,41 @@ REQUEST DATA:
 STATUS CODE : 201
 RESPONSE:
 {
-  "id": "3a13039e-83cf-475b-ab02-642a8749eb3d",
+  "id": "12233868-26d7-4e30-91e9-52d9023e05ad",
   "title": "Pytest Event",
   "date": "2026-08-19",
   "time": "12:00",
   "location": "Pytest Room",
   "capacity": 20,
   "description": "Created during pytest test run.",
-  "created_at": "2026-08-09T17:33:58.846353",
+  "created_at": "2026-08-09T16:24:30.304293",
   "user_id": 16
 }
 ============================================================
 
 ============================================================
-TIMESTAMP   : 2026-08-09T17:33:58.862584
-TESTED ROUTE: GET /user/events/3a13039e-83cf-475b-ab02-642a8749eb3d
+TIMESTAMP   : 2026-08-09T16:24:30.318681
+TESTED ROUTE: GET /user/events/12233868-26d7-4e30-91e9-52d9023e05ad
 REQUEST DATA: None
 STATUS CODE : 200
 RESPONSE:
 {
-  "id": "3a13039e-83cf-475b-ab02-642a8749eb3d",
+  "id": "12233868-26d7-4e30-91e9-52d9023e05ad",
   "title": "Pytest Event",
   "date": "2026-08-19",
   "time": "12:00",
   "location": "Pytest Room",
   "capacity": 20,
   "description": "Created during pytest test run.",
-  "created_at": "2026-08-09T17:33:58.846353",
+  "created_at": "2026-08-09T16:24:30.304293",
   "user_id": 16,
   "registered": 0
 }
 ============================================================
 
 ============================================================
-TIMESTAMP   : 2026-08-09T17:33:58.877702
-TESTED ROUTE: PUT /user/events/3a13039e-83cf-475b-ab02-642a8749eb3d
+TIMESTAMP   : 2026-08-09T16:24:30.332378
+TESTED ROUTE: PUT /user/events/12233868-26d7-4e30-91e9-52d9023e05ad
 REQUEST DATA:
 {
   "title": "Updated Pytest Event"
@@ -122,40 +122,40 @@ REQUEST DATA:
 STATUS CODE : 200
 RESPONSE:
 {
-  "id": "3a13039e-83cf-475b-ab02-642a8749eb3d",
+  "id": "12233868-26d7-4e30-91e9-52d9023e05ad",
   "title": "Updated Pytest Event",
   "date": "2026-08-19",
   "time": "12:00",
   "location": "Pytest Room",
   "capacity": 20,
   "description": "Created during pytest test run.",
-  "created_at": "2026-08-09T17:33:58.846353",
+  "created_at": "2026-08-09T16:24:30.304293",
   "user_id": 16,
   "registered": 0
 }
 ============================================================
 
 ============================================================
-TIMESTAMP   : 2026-08-09T17:33:58.892145
-TESTED ROUTE: POST /events/3a13039e-83cf-475b-ab02-642a8749eb3d/register
+TIMESTAMP   : 2026-08-09T16:24:30.346175
+TESTED ROUTE: POST /events/12233868-26d7-4e30-91e9-52d9023e05ad/register
 REQUEST DATA:
 {
   "attendee_name": "Test Attendee",
-  "attendee_email": "attendee_173358@example.com"
+  "attendee_email": "attendee_162430@example.com"
 }
 STATUS CODE : 201
 RESPONSE:
 {
   "message": "Registration successful",
   "event": {
-    "id": "3a13039e-83cf-475b-ab02-642a8749eb3d",
+    "id": "12233868-26d7-4e30-91e9-52d9023e05ad",
     "title": "Updated Pytest Event",
     "date": "2026-08-19",
     "time": "12:00",
     "location": "Pytest Room",
     "capacity": 20,
     "description": "Created during pytest test run.",
-    "created_at": "2026-08-09T17:33:58.846353",
+    "created_at": "2026-08-09T16:24:30.304293",
     "user_id": 16,
     "registered": 1
   }
@@ -163,24 +163,24 @@ RESPONSE:
 ============================================================
 
 ============================================================
-TIMESTAMP   : 2026-08-09T17:33:58.894684
-TESTED ROUTE: GET /user/events/3a13039e-83cf-475b-ab02-642a8749eb3d/attendees
+TIMESTAMP   : 2026-08-09T16:24:30.348673
+TESTED ROUTE: GET /user/events/12233868-26d7-4e30-91e9-52d9023e05ad/attendees
 REQUEST DATA: None
 STATUS CODE : 200
 RESPONSE:
 [
   {
-    "id": "dfa702b3-6b8e-4d9b-8b98-cbd57c5699af",
+    "id": "67844891-de75-4cbd-9306-b24c42ab6431",
     "attendee_name": "Test Attendee",
-    "attendee_email": "attendee_173358@example.com",
-    "registration_date": "2026-08-09T17:33:58.879403"
+    "attendee_email": "attendee_162430@example.com",
+    "registration_date": "2026-08-09T16:24:30.333854"
   }
 ]
 ============================================================
 
 ============================================================
-TIMESTAMP   : 2026-08-09T17:33:58.909335
-TESTED ROUTE: DELETE /user/events/3a13039e-83cf-475b-ab02-642a8749eb3d
+TIMESTAMP   : 2026-08-09T16:24:30.361942
+TESTED ROUTE: DELETE /user/events/12233868-26d7-4e30-91e9-52d9023e05ad
 REQUEST DATA: None
 STATUS CODE : 200
 RESPONSE:
