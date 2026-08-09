@@ -28,14 +28,12 @@ services:
     container_name: campus-navigation-frontend 
     networks:
       - campus-internal
-      - reverse-proxy
+      - reverse-proxy_net
     env_file:
       - ./frontend/.env.local
     restart: unless-stopped
 networks:
   campus-internal:
-    name: campus-project_campus-internal
     driver: bridge
-  reverse-proxy:
-    name: reverse-proxy
+  reverse-proxy_net:
     external: true
