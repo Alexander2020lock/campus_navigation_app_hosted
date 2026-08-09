@@ -6,6 +6,8 @@ services:
     container_name: campus-navigation-backend
     env_file:
       - ./backend/.env.docker
+    ports:
+      - "8000:8000"
     restart: unless-stopped
     healthcheck:
       test:
@@ -19,8 +21,6 @@ services:
       timeout: 5s
       retries: 3
       start_period: 10s
-    networks:
-      - campus-internal
   frontend:
     build:
       context: ./frontend/
@@ -28,14 +28,6 @@ services:
     container_name: campus-navigation-frontend 
     env_file:
       - ./frontend/.env.local
+    ports:
+      - "3000:3000"
     restart: unless-stopped
-    networks:
-      - campus-internal
-      - reverse-proxy_net
-
-networks:
-  campus-internal:
-    driver: bridge
-
-  reverse-proxy_net:
-    external: true
