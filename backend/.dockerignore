@@ -1,0 +1,39 @@
+# Byte-compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Environment files
+.env
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Git-related files
+.git
+.gitignore
+
+# Docker-related files
+Dockerfile
+docker-compose.yml
+
+# Local config files
+*.log
+*.db
+.DS_Store
+
+# Cache and temporary files
+*.bak
+*.swp
+*.tmp
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# Documentation files
+*.md
+docs/

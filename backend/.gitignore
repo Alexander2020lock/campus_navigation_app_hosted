@@ -1,0 +1,44 @@
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore database files
+server_setup.py
+
+# Ignore environment files
+.env
+
+# Ignore system files
+Thumbs.db
+.DS_Store
+
+# Ignore output directories
+Old Utils/
+
+# Ignore virtual environment
+venv/
+
+# Ignore personal utilities directory
+server/Personal Utils/
+
+# Ignore specific files
+how to run individual files in Utils.txt
+test_process_path.ps1
+
+# Ignore Python cache files and directories
+server/__pycache__/
+server/Old Utils/__pycache__/
+
+# Ignore environment files and virtual environment
+.env
+.venv/
+
+# Ignore output files or directories
+server/extracted_data.txt
+server/Output_Maps/
+server/Chatbot/temp_audio
+example_audio.wav
+api_test_log.txt
+api_test_log_events.txt
+client_api_log.txt
+Output_Maps/*

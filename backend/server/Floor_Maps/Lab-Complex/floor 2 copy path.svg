@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:svg="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 595.3 841.9">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-16 {
+        isolation: isolate;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-16 {
+        font-family: ArialMT, Arial;
+      }
+
+      .cls-1, .cls-2, .cls-17, .cls-18, .cls-19, .cls-20, .cls-11, .cls-21 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-12, .cls-15 {
+        font-size: 20px;
+      }
+
+      .cls-2, .cls-5 {
+        font-size: 16px;
+      }
+
+      .cls-22, .cls-3, .cls-23, .cls-5, .cls-9, .cls-12, .cls-14, .cls-15 {
+        fill: none;
+      }
+
+      .cls-22, .cls-18, .cls-19, .cls-9, .cls-24 {
+        stroke: #000;
+      }
+
+      .cls-22, .cls-19 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-3 {
+        stroke-width: 1.1px;
+      }
+
+      .cls-3, .cls-17, .cls-20, .cls-5, .cls-12, .cls-21, .cls-14, .cls-15 {
+        stroke: #28170b;
+      }
+
+      .cls-3, .cls-5, .cls-12, .cls-15 {
+        stroke-miterlimit: 11.6;
+      }
+
+      .cls-3, .cls-13 {
+        font-size: 20px;
+      }
+
+      .cls-17 {
+        stroke-width: 2px;
+      }
+
+      .cls-18 {
+        fill-opacity: .5;
+        stroke-width: 2px;
+      }
+
+      .cls-20 {
+        stroke-width: 1px;
+      }
+
+      .cls-4, .cls-9 {
+        font-size: 19.5px;
+      }
+
+      .cls-5 {
+        stroke-width: .9px;
+      }
+
+      .cls-7 {
+        font-size: 18.8px;
+      }
+
+      .cls-8 {
+        font-size: 17.4px;
+      }
+
+      .cls-9 {
+        stroke-width: .5px;
+      }
+
+      .cls-10 {
+        font-size: 16px;
+      }
+
+      .cls-11, .cls-14 {
+        font-size: 22.9px;
+      }
+
+      .cls-12 {
+        stroke-width: 1.1px;
+      }
+
+      .cls-21 {
+        stroke-width: 2px;
+      }
+
+      .cls-13 {
+        fill: #1c1c1c;
+      }
+
+      .cls-14 {
+        stroke-width: .6px;
+      }
+
+      .cls-15 {
+        stroke-width: 1.7px;
+      }
+
+      .cls-16 {
+        font-size: 17.6px;
+      }
+
+      .cls-25 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <path class="cls-23" d="M61.7,368v7.1c2.9-.1,5.8-.3,8.7-.6.7,0,1.4-.1,2-.1,10.1,0,13.1,8.1,7.6,12.6-1.3,2.2-4,4-8,4.5,2.4,1.4,5.1,2.5,7.3,4.1.9.6,1.6,1.4,2.4,2.1-.4,3.2,0,6.5-.7,9.6,1.1,2,1.8,4.2,1.4,6.6-.2,1.4-1,2.6-1.5,3.9-1.1,1-2.1,2-3.2,2.9-6.1,5.7-5.1-2.2-4.5-8.6-2.3.3-4.6.5-5.7.6,0-.6,0-1.2,0-1.8-.2.5-.3,1-.3,1.5,0,1.3.5,2.4.8,2.8-.2-.2-.4-.5-1-1.1-.7-.5-1.5-.9-2.1-1.5-.4-.4,1.8.8,1.8.2,0-2.8,0-5.1-.3-6.9-1.3-.7-2.7-1.5-4-2.3-.2-.1-.5-.3-.7-.5v79h101.4v-114.1H61.7ZM70.8,408.4s0,0,0,.1c.7.3.6.2,0-.1Z"/>
+    </clipPath>
+  </defs>
+  <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+  <g>
+    <g id="svg1" inkscape:version="1.4 (86a8ad7, 2024-10-11)" sodipodi:docname="lab_complex-02[1].svg">
+      <sodipodi:namedview id="namedview1" bordercolor="#000000" borderopacity="0.25" inkscape:current-layer="layer1-5" inkscape:cx="576.05286" inkscape:cy="516.49659" inkscape:deskcolor="#d1d1d1" inkscape:document-units="mm" inkscape:pagecheckerboard="0" inkscape:pageopacity="0.0" inkscape:showpageshadow="2" inkscape:window-height="981" inkscape:window-maximized="0" inkscape:window-width="1245" inkscape:window-x="0" inkscape:window-y="0" inkscape:zoom="0.48693448" pagecolor="#ffffff"/>
+      <g id="layer1" inkscape:groupmode="layer" inkscape:label="Layer 1">
+        <g id="layer1-5" inkscape:groupmode="layer" inkscape:label="Layer 1">
+          <rect id="rect3" class="cls-18" x="178.4" y="743.6" width="43.5" height="73"/>
+          <rect id="rect4" class="cls-18" x="17" y="485.5" width="101.8" height="76.2"/>
+          <rect id="rect5" class="cls-18" x="17" y="294.9" width="95" height="75.1"/>
+          <rect id="rect6" class="cls-18" x="140.6" y="135.9" width="77.8" height="99.1"/>
+          <rect id="rect7" class="cls-18" x="298.5" y="56.4" width="46.9" height="69.7"/>
+          <rect id="rect8" class="cls-18" x="249.3" y="32.4" width="25.2" height="37"/>
+          <rect id="rect9" class="cls-18" x="371.8" y="29.2" width="24" height="34.8"/>
+          <rect id="rect10" class="cls-18" x="433.6" y="122.8" width="73.2" height="95.8"/>
+          <rect id="rect11" class="cls-18" x="482.8" y="291.6" width="93.8" height="76.2"/>
+          <rect id="rect12" class="cls-18" x="474.7" y="464.8" width="97.3" height="76.2"/>
+          <rect id="rect13" class="cls-18" x="337.4" y="678.2" width="83.5" height="95.8"/>
+          <path id="path13" class="cls-18" d="M64,291.6l1.1-89.3h75.5"/>
+          <path id="path14" class="cls-18" d="M179.5,134.8c-1.1-69.7-1.1-84.9-1.1-84.9l66.4-1.1h0"/>
+          <path id="path15" class="cls-18" d="M275.6,47.7l12.6,1.1h0c0,49-1.1,49,0,49h10.3"/>
+          <path id="path16" class="cls-18" d="M345.4,95.6h10.3l-1.1-52.3"/>
+          <path id="path17" class="cls-18" d="M370.6,43.3h-17.2"/>
+          <path id="path20" class="cls-18" d="M398.1,43.3c16-2.2,16-1.1,16-1.1-1.1,130.7-1.1,131.8-2.3,131.8h-1.1l20.6,2.2h0"/>
+          <path id="path21" class="cls-18" d="M505.6,174c20.6,0,20.6-1.1,20.6,0v1.1l-1.1,115.4"/>
+          <path id="path22" class="cls-18" d="M530.8,367.9v94.7"/>
+          <path id="path23" class="cls-18" d="M530.8,542.1l2.3,163.4-108.7,1.1"/>
+          <path id="path25" class="cls-18" d="M334,724c-49.2-2.2-50.3,0-49.2-2.2l1.1-2.2-2.3,62.1h-60.6"/>
+          <path id="path26" class="cls-18" d="M174.9,782.8c-46.9,1.1-46.9,2.2-46.9,1.1v-1.1l1.1-54.5-59.5,1.1-4.6-166.6h0"/>
+          <path id="path1" d="M178.4,765.4h44.6"/>
+          <path id="path4" d="M180.7,765.4l40,1.1"/>
+          <path id="path7" class="cls-24" d="M178.4,766.4l42.3-1.1"/>
+          <path id="path8" class="cls-24" d="M176.1,795.8l44.6-1.1"/>
+          <path id="path9" class="cls-24" d="M302,80.4h42.3"/>
+          <path id="path10" class="cls-24" d="M298.5,107.6h44.6"/>
+          <g id="text16" class="cls-6">
+            <text class="cls-10" transform="translate(295.1 150.1) scale(1.1 1)"><tspan x="0" y="0">STAIRS</tspan></text>
+          </g>
+          <g id="text17" class="cls-6">
+            <text class="cls-10" transform="translate(170.4 728.3) scale(1.1 1)"><tspan x="0" y="0">STAIRS</tspan></text>
+          </g>
+          <g id="text18" class="cls-6" inkscape:transform-center-x="1.152652" inkscape:transform-center-y="-7.3001294">
+            <text class="cls-10" transform="translate(256.2 55.3) scale(1.1 1)"><tspan x="0" y="0">B</tspan></text>
+          </g>
+          <g id="text19" class="cls-6">
+            <text class="cls-10" transform="translate(376.3 52) scale(1.1 1)"><tspan x="0" y="0">G</tspan></text>
+          </g>
+          <g id="text20" class="cls-6">
+            <text class="cls-4" transform="translate(429.5 566.1) scale(1.1 1)"><tspan x="0" y="0">READING </tspan></text>
+            <text class="cls-9" transform="translate(429.5 566.1) scale(1.1 1)"><tspan x="0" y="0">READING </tspan></text>
+            <text class="cls-4" transform="translate(429.5 590.5) scale(1.1 1)"><tspan x="0" y="0">ROOM</tspan></text>
+            <text class="cls-9" transform="translate(429.5 590.5) scale(1.1 1)"><tspan x="0" y="0">ROOM</tspan></text>
+          </g>
+          <g id="text23" class="cls-6">
+            <text class="cls-10" transform="translate(513.7 333) scale(1.1 1)"><tspan x="0" y="0">203</tspan></text>
+          </g>
+          <g id="text31" class="cls-6">
+            <text class="cls-16" transform="translate(362.9 731.1) scale(.8 1)"><tspan x="0" y="0">205 </tspan></text>
+          </g>
+          <g id="text39" class="cls-6">
+            <text class="cls-10" transform="translate(162.4 188.2) scale(1.1 1)"><tspan x="0" y="0">201</tspan></text>
+          </g>
+          <g id="text40" class="cls-6">
+            <text class="cls-10" transform="translate(455.3 172.9) scale(1.1 1)"><tspan x="0" y="0">202</tspan></text>
+          </g>
+          <g id="text1" class="cls-6">
+            <text class="cls-7" transform="translate(403.9 34.6) scale(.8 1)"><tspan x="0" y="0">GIRLS&apos; WASHROOM</tspan></text>
+          </g>
+          <g id="text2" class="cls-6" inkscape:transform-center-x="-0.35632785" inkscape:transform-center-y="0.83593627">
+            <text class="cls-8" transform="translate(95 36.8) scale(.9 1)"><tspan x="0" y="0">BOYS&apos; WASHROOM</tspan></text>
+          </g>
+          <g class="cls-25">
+            <path id="path11" class="cls-21" d="M64.7,482.1v-32.3h95.5v-47.7h0l-95.5-1.5,1.5-32.3"/>
+          </g>
+          <path id="path36" class="cls-17" d="M63.2,372.7l1.5,29.3"/>
+          <path id="path37" class="cls-17" d="M87.8,402h-20"/>
+          <g id="text41" class="cls-6">
+            <text class="cls-11" transform="translate(76.9 595.2) scale(.8 1)"><tspan x="0" y="0">UHV SYSTEMS </tspan></text>
+            <text class="cls-14" transform="translate(76.9 595.2) scale(.8 1)"><tspan x="0" y="0">UHV SYSTEMS </tspan></text>
+            <text class="cls-11" transform="translate(76.9 623.9) scale(.8 1)"><tspan x="0" y="0">RESEARCH LAB</tspan></text>
+            <text class="cls-14" transform="translate(76.9 623.9) scale(.8 1)"><tspan x="0" y="0">RESEARCH LAB</tspan></text>
+          </g>
+          <g id="text44" class="cls-6">
+            <text class="cls-13" transform="translate(46.2 517.5)"><tspan x="0" y="0">206</tspan></text>
+            <text class="cls-3" transform="translate(46.2 517.5)"><tspan x="0" y="0">206</tspan></text>
+          </g>
+          <g id="text45" class="cls-6">
+            <text class="cls-1" transform="translate(53.9 328.1)"><tspan x="0" y="0">207</tspan></text>
+            <text class="cls-12" transform="translate(53.9 328.1)"><tspan x="0" y="0">207</tspan></text>
+          </g>
+          <g id="text46" class="cls-6">
+            <text class="cls-1" transform="translate(422 109.4)"><tspan x="0" y="0">PLACEMENT LAB</tspan></text>
+            <text class="cls-15" transform="translate(422 109.4)"><tspan x="0" y="0">PLACEMENT LAB</tspan></text>
+          </g>
+          <g id="text48" class="cls-6">
+            <text class="cls-2" transform="translate(512.9 506.7)"><tspan x="0" y="0">204</tspan></text>
+            <text class="cls-5" transform="translate(512.9 506.7)"><tspan x="0" y="0">204</tspan></text>
+          </g>
+          <path id="rect49" class="cls-20" d="M198.2,261.8h233.5c5.7,0,10.3,4.4,10.3,9.8v259.2c0,5.4-4.6,9.8-10.3,9.8h-233.5c-5.7,0-10.3-4.4-10.3-9.8v-259.2c0-5.4,4.6-9.8,10.3-9.8Z"/>
+        </g>
+      </g>
+    </g>
+    <g id="Path">
+      <polyline class="cls-19" points="200.1 784.3 200.7 655 379.2 655 379.9 725.2"/>
+      <polyline class="cls-19" points="65.7 510.5 151 510.5 200.7 655"/>
+      <polyline class="cls-19" points="67.7 321 176.1 321 174.9 482.1 151 510.5"/>
+      <polyline class="cls-19" points="528.5 501.1 455.8 502.9 448 572 424.4 607.2 398.1 624.3 377.2 648 379.2 655"/>
+      <polyline class="cls-19" points="525.9 331.1 500 331.1 491.7 331.1 470.2 333 455.8 329.7 455.8 357 455.8 370 455.8 387.4 455.8 402 455.8 420.9 455.8 436 455.8 458 452.9 472 452.9 485.5 455.8 495.2 455.8 502.9"/>
+      <polyline class="cls-19" points="466.9 167.3 460 211 460 235 455.8 261.8 455.8 276 455.8 301 455.8 329.7"/>
+      <polyline class="cls-19" points="176.1 321 171.1 285 171.1 261.8 173.6 240 171.1 208 173.6 187.2"/>
+      <polyline class="cls-19" points="262 54 262 64 261.9 80.4 266.5 95.6 266.5 115 274.5 134.8 249.3 224 229 243 235 247"/>
+      <polyline class="cls-22" points="274.5 134.8 307 188.2 322 202.3 350.6 210 370.6 210 383.8 210 404.7 218.7 431.1 227 460 235 442.1 248.5 424.4 247 404.7 247 388.4 247 377.2 247 355.7 247 343.2 247 327 242 302 247 290 247 266.5 242 249.3 247 235 247 211.6 242 193 247 171.1 261.8"/>
+      <polyline class="cls-22" points="383.4 52.2 383.8 97.8 386.6 122.8 383.4 150.5 362 172.9 334 193 283 218.7 249.3 235 235 247"/>
+      <polyline class="cls-22" points="460 235 414.7 213 404.7 198.3 398.1 185.4 398.1 176.7 383.4 150.5"/>
+      <polyline class="cls-22" points="323.1 103 323.1 134.8 327 242"/>
+    </g>
+  </g>
+</svg>
