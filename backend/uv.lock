@@ -4,8 +4,12 @@ requires-python = ">=3.10"
 resolution-markers = [
     "python_full_version >= '3.14'",
     "python_full_version == '3.13.*'",
+<<<<<<< HEAD
     "python_full_version == '3.12.*'",
     "python_full_version == '3.11.*'",
+=======
+    "python_full_version >= '3.11' and python_full_version < '3.13'",
+>>>>>>> 55c0029 (updated both frontend and backend)
     "python_full_version < '3.11'",
 ]
 
@@ -42,6 +46,7 @@ wheels = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "audioop-lts"
 version = "0.2.2"
 source = { registry = "https://pypi.org/simple" }
@@ -98,10 +103,13 @@ wheels = [
 ]
 
 [[package]]
+=======
+>>>>>>> 55c0029 (updated both frontend and backend)
 name = "backend"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+<<<<<<< HEAD
     { name = "en-core-web-sm" },
     { name = "fastapi", extra = ["standard"] },
     { name = "gunicorn" },
@@ -115,6 +123,10 @@ dependencies = [
     { name = "spacy" },
     { name = "speechrecognition" },
     { name = "werkzeug" },
+=======
+    { name = "fastapi", extra = ["standard"] },
+    { name = "gunicorn" },
+>>>>>>> 55c0029 (updated both frontend and backend)
 ]
 
 [package.dev-dependencies]
@@ -122,10 +134,15 @@ dev = [
     { name = "coverage" },
     { name = "pytest" },
     { name = "pytest-asyncio" },
+<<<<<<< HEAD
+=======
+    { name = "uvicorn" },
+>>>>>>> 55c0029 (updated both frontend and backend)
 ]
 
 [package.metadata]
 requires-dist = [
+<<<<<<< HEAD
     { name = "en-core-web-sm", url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl" },
     { name = "fastapi", extras = ["standard"], specifier = ">=0.141.1" },
     { name = "gunicorn", specifier = ">=26.0.0" },
@@ -138,6 +155,10 @@ requires-dist = [
     { name = "spacy", specifier = ">=3.8.15" },
     { name = "speechrecognition", specifier = ">=3.17.0" },
     { name = "werkzeug", specifier = ">=3.1.8" },
+=======
+    { name = "fastapi", extras = ["standard"], specifier = ">=0.141.1" },
+    { name = "gunicorn", specifier = ">=26.0.0" },
+>>>>>>> 55c0029 (updated both frontend and backend)
 ]
 
 [package.metadata.requires-dev]
@@ -145,6 +166,10 @@ dev = [
     { name = "coverage", specifier = ">=7.15.4" },
     { name = "pytest", specifier = ">=9.1.1" },
     { name = "pytest-asyncio", specifier = ">=1.4.0" },
+<<<<<<< HEAD
+=======
+    { name = "uvicorn", specifier = ">=0.52.1" },
+>>>>>>> 55c0029 (updated both frontend and backend)
 ]
 
 [[package]]
@@ -157,6 +182,7 @@ wheels = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "blis"
 version = "1.3.3"
 source = { registry = "https://pypi.org/simple" }
@@ -213,6 +239,8 @@ wheels = [
 ]
 
 [[package]]
+=======
+>>>>>>> 55c0029 (updated both frontend and backend)
 name = "certifi"
 version = "2026.7.22"
 source = { registry = "https://pypi.org/simple" }
@@ -222,6 +250,7 @@ wheels = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "charset-normalizer"
 version = "3.4.9"
 source = { registry = "https://pypi.org/simple" }
@@ -309,6 +338,8 @@ wheels = [
 ]
 
 [[package]]
+=======
+>>>>>>> 55c0029 (updated both frontend and backend)
 name = "click"
 version = "8.4.2"
 source = { registry = "https://pypi.org/simple" }
@@ -321,6 +352,7 @@ wheels = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "cloudpathlib"
 version = "0.24.0"
 source = { registry = "https://pypi.org/simple" }
@@ -333,6 +365,8 @@ wheels = [
 ]
 
 [[package]]
+=======
+>>>>>>> 55c0029 (updated both frontend and backend)
 name = "colorama"
 version = "0.4.6"
 source = { registry = "https://pypi.org/simple" }
@@ -342,6 +376,7 @@ wheels = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "confection"
 version = "1.3.3"
 source = { registry = "https://pypi.org/simple" }
@@ -354,6 +389,8 @@ wheels = [
 ]
 
 [[package]]
+=======
+>>>>>>> 55c0029 (updated both frontend and backend)
 name = "coverage"
 version = "7.15.4"
 source = { registry = "https://pypi.org/simple" }
@@ -482,6 +519,7 @@ wheels = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "cymem"
 version = "2.0.13"
 source = { registry = "https://pypi.org/simple" }
@@ -555,6 +593,8 @@ wheels = [
 ]
 
 [[package]]
+=======
+>>>>>>> 55c0029 (updated both frontend and backend)
 name = "detect-installer"
 version = "0.1.0"
 source = { registry = "https://pypi.org/simple" }
@@ -573,6 +613,7 @@ wheels = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "ecdsa"
 version = "0.19.2"
 source = { registry = "https://pypi.org/simple" }
@@ -585,6 +626,8 @@ wheels = [
 ]
 
 [[package]]
+=======
+>>>>>>> 55c0029 (updated both frontend and backend)
 name = "email-validator"
 version = "2.3.0"
 source = { registry = "https://pypi.org/simple" }
@@ -598,6 +641,7 @@ wheels = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "en-core-web-sm"
 version = "3.8.0"
 source = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl" }
@@ -606,6 +650,8 @@ wheels = [
 ]
 
 [[package]]
+=======
+>>>>>>> 55c0029 (updated both frontend and backend)
 name = "exceptiongroup"
 version = "1.3.1"
 source = { registry = "https://pypi.org/simple" }
@@ -933,6 +979,7 @@ wheels = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "joblib"
 version = "1.5.3"
 source = { registry = "https://pypi.org/simple" }
@@ -1060,6 +1107,8 @@ wheels = [
 ]
 
 [[package]]
+=======
+>>>>>>> 55c0029 (updated both frontend and backend)
 name = "markdown-it-py"
 version = "4.2.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1166,6 +1215,7 @@ wheels = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "murmurhash"
 version = "1.0.15"
 source = { registry = "https://pypi.org/simple" }
@@ -1423,6 +1473,8 @@ wheels = [
 ]
 
 [[package]]
+=======
+>>>>>>> 55c0029 (updated both frontend and backend)
 name = "packaging"
 version = "26.3"
 source = { registry = "https://pypi.org/simple" }
@@ -1441,6 +1493,7 @@ wheels = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "preshed"
 version = "3.0.13"
 source = { registry = "https://pypi.org/simple" }
@@ -1510,6 +1563,8 @@ wheels = [
 ]
 
 [[package]]
+=======
+>>>>>>> 55c0029 (updated both frontend and backend)
 name = "pydantic"
 version = "2.13.4"
 source = { registry = "https://pypi.org/simple" }
@@ -1723,6 +1778,7 @@ wheels = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "python-jose"
 version = "3.5.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1737,6 +1793,8 @@ wheels = [
 ]
 
 [[package]]
+=======
+>>>>>>> 55c0029 (updated both frontend and backend)
 name = "python-multipart"
 version = "0.0.32"
 source = { registry = "https://pypi.org/simple" }
@@ -1810,6 +1868,7 @@ wheels = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "rank-bm25"
 version = "0.2.2"
 source = { registry = "https://pypi.org/simple" }
@@ -2049,6 +2108,8 @@ wheels = [
 ]
 
 [[package]]
+=======
+>>>>>>> 55c0029 (updated both frontend and backend)
 name = "rich"
 version = "15.0.0"
 source = { registry = "https://pypi.org/simple" }
@@ -2224,6 +2285,7 @@ wheels = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "rsa"
 version = "4.9.1"
 source = { registry = "https://pypi.org/simple" }
@@ -2236,6 +2298,8 @@ wheels = [
 ]
 
 [[package]]
+=======
+>>>>>>> 55c0029 (updated both frontend and backend)
 name = "sentry-sdk"
 version = "2.66.1"
 source = { registry = "https://pypi.org/simple" }
@@ -2249,6 +2313,7 @@ wheels = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "setuptools"
 version = "84.0.0"
 source = { registry = "https://pypi.org/simple" }
@@ -2258,6 +2323,8 @@ wheels = [
 ]
 
 [[package]]
+=======
+>>>>>>> 55c0029 (updated both frontend and backend)
 name = "shellingham"
 version = "1.5.4"
 source = { registry = "https://pypi.org/simple" }
@@ -2267,6 +2334,7 @@ wheels = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "six"
 version = "1.17.0"
 source = { registry = "https://pypi.org/simple" }
@@ -2461,6 +2529,8 @@ wheels = [
 ]
 
 [[package]]
+=======
+>>>>>>> 55c0029 (updated both frontend and backend)
 name = "starlette"
 version = "1.6.0"
 source = { registry = "https://pypi.org/simple" }
@@ -2474,6 +2544,7 @@ wheels = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "thinc"
 version = "8.3.13"
 source = { registry = "https://pypi.org/simple" }
@@ -2536,6 +2607,8 @@ wheels = [
 ]
 
 [[package]]
+=======
+>>>>>>> 55c0029 (updated both frontend and backend)
 name = "tomli"
 version = "2.4.1"
 source = { registry = "https://pypi.org/simple" }
@@ -2590,6 +2663,7 @@ wheels = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "tqdm"
 version = "4.70.0"
 source = { registry = "https://pypi.org/simple" }
@@ -2602,6 +2676,8 @@ wheels = [
 ]
 
 [[package]]
+=======
+>>>>>>> 55c0029 (updated both frontend and backend)
 name = "typer"
 version = "0.27.1"
 source = { registry = "https://pypi.org/simple" }
@@ -2716,6 +2792,7 @@ wheels = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "wasabi"
 version = "1.1.3"
 source = { registry = "https://pypi.org/simple" }
@@ -2728,6 +2805,8 @@ wheels = [
 ]
 
 [[package]]
+=======
+>>>>>>> 55c0029 (updated both frontend and backend)
 name = "watchfiles"
 version = "1.2.0"
 source = { registry = "https://pypi.org/simple" }
@@ -2845,6 +2924,7 @@ wheels = [
 ]
 
 [[package]]
+<<<<<<< HEAD
 name = "weasel"
 version = "1.0.0"
 source = { registry = "https://pypi.org/simple" }
@@ -2865,6 +2945,8 @@ wheels = [
 ]
 
 [[package]]
+=======
+>>>>>>> 55c0029 (updated both frontend and backend)
 name = "websockets"
 version = "16.1.1"
 source = { registry = "https://pypi.org/simple" }
@@ -2990,8 +3072,12 @@ source = { registry = "https://pypi.org/simple" }
 resolution-markers = [
     "python_full_version >= '3.14'",
     "python_full_version == '3.13.*'",
+<<<<<<< HEAD
     "python_full_version == '3.12.*'",
     "python_full_version == '3.11.*'",
+=======
+    "python_full_version >= '3.11' and python_full_version < '3.13'",
+>>>>>>> 55c0029 (updated both frontend and backend)
 ]
 sdist = { url = "https://files.pythonhosted.org/packages/f7/96/e01084f83a64bcb3a27994bd0cb0db68ff29d9c6707fae37ec19b18ba990/websockets-17.0.1.tar.gz", hash = "sha256:5baa9bc0dfbae8c507e51c8cf1b6d4628086f7a87bbd3a9952bd5f035451f1cc", size = 183298, upload-time = "2026-07-31T11:31:27.665Z" }
 wheels = [
@@ -3103,6 +3189,7 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/bf/e3/91e297e41381d9131f3142a9c1a50389fd96b98125ce9b81526fa4e14b9f/websockets-17.0.1-pp311-pypy311_pp73-win_amd64.whl", hash = "sha256:afbce6e3f0fac32dc87c2a0d84869d1a706460d64f39f3889386413e6e4d3d26", size = 213434, upload-time = "2026-07-31T11:31:24.707Z" },
     { url = "https://files.pythonhosted.org/packages/09/ce/3929538b2b9918f5eee623fbf3346893973191f6df93f19bbda097bd7bb7/websockets-17.0.1-py3-none-any.whl", hash = "sha256:c6be9cba65c65cc76dfa3d4619e359ff02a4476c74e179b215236c11a0b32345", size = 206718, upload-time = "2026-07-31T11:31:26.037Z" },
 ]
+<<<<<<< HEAD
 
 [[package]]
 name = "werkzeug"
@@ -3201,3 +3288,5 @@ wheels = [
     { url = "https://files.pythonhosted.org/packages/55/b3/af176d79a8515a8a720eccdad9a96f6e31a30abf2865430c8c42adf2fd13/wrapt-2.3.0-cp314-cp314t-win_arm64.whl", hash = "sha256:b1e5aa486e269b00ed35e64771c7d0ab8096cfd2643405ca8cd60ebedc099a51", size = 81774, upload-time = "2026-07-28T06:05:53.902Z" },
     { url = "https://files.pythonhosted.org/packages/00/39/3daf9f47be208606586de4568ba6713db53ebc8fd7a575aea1fe57983b69/wrapt-2.3.0-py3-none-any.whl", hash = "sha256:d8c7ed08477429752b8c44991f40ad7838b18332a160698740a6bfbc10d998a2", size = 61866, upload-time = "2026-07-28T06:06:12.9Z" },
 ]
+=======
+>>>>>>> 55c0029 (updated both frontend and backend)
