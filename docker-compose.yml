@@ -1,0 +1,33 @@
+services:
+  backend:
+    build:
+      context: ./backend/
+      dockerfile: Dockerfile
+    container_name: campus-navigation-backend
+    env_file:
+      - ./backend/.env.docker
+    ports:
+      - "8000:8000"
+    restart: unless-stopped
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "python",
+          "-c",
+          "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/docs')"
+        ]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+  frontend:
+    build:
+      context: ./frontend/
+      dockerfile: Dockerfile
+    container_name: campus-navigation-frontend 
+    env_file:
+      - ./frontend/.env.local
+    ports:
+      - "3000:3000"
+    restart: unless-stopped

@@ -14,12 +14,14 @@ from Chatbot.__init__ import env_variables, process_data
 
 # Set up NLTK data path
 if os.getenv("DOCKER_ENV") or os.path.exists("/.dockerenv"):
-    nltk_data_dir = "/usr/local/nltk_data"
+    nltk_data_dir = "./nltk_data"
     nltk.data.path = [nltk_data_dir]
     try:
         nltk.data.find("tokenizers/punkt")
     except LookupError:
         nltk.download("punkt", download_dir=nltk_data_dir)
+        nltk.download("stopwords", download_dir=nltk_data_dir)
+        nltk.download("punkt_tab", download_dir=nltk_data_dir)
 else:
     nltk.download("punkt", quiet=True)
 
