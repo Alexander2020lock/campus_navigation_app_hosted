@@ -3,13 +3,15 @@ import { getAuth, GoogleAuthProvider, setPersistence, browserLocalPersistence } 
 
 // Your Firebase configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyBTmB3lWhBOf0MU-juEm5jY_yPONWNeu-g",
-    authDomain: "projectexpo-ea0f1.firebaseapp.com",
-    projectId: "projectexpo-ea0f1",
-    storageBucket: "projectexpo-ea0f1.firebasestorage.app",
-    messagingSenderId: "802175575055",
-    appId: "1:802175575055:web:726a9e1543b1ba5e562f7a"
+    apiKey: "AIzaSyCLsKfTl78CPn3cUB4KHI4RDjOPmkd6H28",
+    authDomain: "campnav-7e476.firebaseapp.com",
+    projectId: "campnav-7e476",
+    storageBucket: "campnav-7e476.firebasestorage.app",
+    messagingSenderId: "170272319705",
+    appId: "1:170272319705:web:4ecb8e2dde4b67e696f6c8",
+    measurementId: "G-E0MR43V0Z3"
 };
+
 
 // Initialize Firebase app
 const app = initializeApp(firebaseConfig);
