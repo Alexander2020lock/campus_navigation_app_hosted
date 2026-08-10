@@ -9,6 +9,7 @@ services:
     restart: unless-stopped
     networks:
       - campus-internal
+      - reverse-proxy_net
     healthcheck:
       test:
         [
