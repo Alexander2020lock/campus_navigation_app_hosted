@@ -31,7 +31,7 @@ from Events_Management.event_view import events_router
 from Events_Management.user_management import users_router
 from Events_Management.event_management import user_events_router
 
-app = FastAPI()
+app = FastAPI(root_path="/api")
 
 
 app.add_middleware(
