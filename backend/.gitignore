@@ -35,11 +35,9 @@ server/Old Utils/__pycache__/
 
 # Ignore output files or directories
 server/extracted_data.txt
-server/Output_Maps/
 server/Chatbot/temp_audio
 example_audio.wav
 api_test_log.txt
 api_test_log_events.txt
 client_api_log.txt
-Output_Maps/*
 .env.docker
