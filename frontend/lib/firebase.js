@@ -30,4 +30,3 @@ setPersistence(auth, browserLocalPersistence)
     });
 
 export { auth, googleProvider };
-

@@ -1,7 +1,7 @@
 // lib/api.js
 // Centralized API client service for Campus Navigator FastAPI Backend
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'https://campnav.shreyanshpande.work/api';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://campnav.shreyanshpande.work/api';
 
 export { API_BASE_URL };
 
@@ -65,6 +65,17 @@ export async function listEvents() {
   if (!res.ok) {
     throw new Error(`Failed to fetch events: ${res.statusText}`);
   }
+  return await res.json();
+}
+
+/**
+ * Get active registration event IDs for a given attendee email (GET /events/user-registrations?email=...)
+ */
+export async function getUserRegistrations(email) {
+  if (!email) return [];
+  const params = new URLSearchParams({ email });
+  const res = await fetchApi(`/events/user-registrations?${params.toString()}`);
+  if (!res.ok) return [];
   return await res.json();
 }
 

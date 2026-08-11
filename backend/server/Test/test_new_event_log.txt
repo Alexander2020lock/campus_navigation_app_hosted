@@ -1,6 +1,7 @@
 === TEST SUITE LOG: test_new_event_log.txt ===
 
 ============================================================
+<<<<<<< HEAD
 TIMESTAMP   : 2026-08-09T17:33:59.793865
 TESTED ROUTE: POST /user/register
 REQUEST DATA:
@@ -93,6 +94,101 @@ RESPONSE:
 ============================================================
 TIMESTAMP   : 2026-08-09T17:33:59.919420
 TESTED ROUTE: DELETE /user/events/ccf30570-5058-445a-b7c0-66348d531543
+||||||| empty tree
+=======
+TIMESTAMP   : 2026-08-09T16:24:31.618932
+TESTED ROUTE: POST /user/register
+REQUEST DATA:
+{
+  "username": "testuser_async",
+  "password": "Test@1234",
+  "email": "testuser_async@example.com"
+}
+STATUS CODE : 409
+RESPONSE:
+{
+  "detail": "Username or email already exists"
+}
+============================================================
+
+============================================================
+TIMESTAMP   : 2026-08-09T16:24:31.702035
+TESTED ROUTE: POST /user/login
+REQUEST DATA:
+{
+  "username": "testuser_async",
+  "password": "Test@1234"
+}
+STATUS CODE : 200
+RESPONSE:
+{
+  "message": "Login successful",
+  "last_login": "2026-08-09T16:24:31.689578",
+  "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2IiwiZXhwIjoxNzg2Mjc0NjcxfQ.JtNjziWt3GVBgkE9UCC2U8X2jLN4aH-efZIHg9PMCsQ",
+  "token_type": "bearer"
+}
+============================================================
+
+============================================================
+TIMESTAMP   : 2026-08-09T16:24:31.714305
+TESTED ROUTE: POST /user/events/
+REQUEST DATA:
+{
+  "title": "Async Test Event",
+  "description": "An event created using async tests",
+  "date": "2025-05-01",
+  "time": "10:00",
+  "capacity": 100,
+  "location": "Async City",
+  "start_time": "2025-05-01T10:00:00",
+  "end_time": "2025-05-01T12:00:00"
+}
+STATUS CODE : 201
+RESPONSE:
+{
+  "id": "b1cbf322-b239-4c97-b3b8-d7f9d6f961b1",
+  "title": "Async Test Event",
+  "date": "2025-05-01",
+  "time": "10:00",
+  "location": "Async City",
+  "capacity": 100,
+  "description": "An event created using async tests",
+  "created_at": "2026-08-09T16:24:31.703459",
+  "user_id": 6
+}
+============================================================
+
+============================================================
+TIMESTAMP   : 2026-08-09T16:24:31.729406
+TESTED ROUTE: POST /events/b1cbf322-b239-4c97-b3b8-d7f9d6f961b1/register
+REQUEST DATA:
+{
+  "attendee_name": "Async John",
+  "attendee_email": "john_async_a209e6@example.com"
+}
+STATUS CODE : 201
+RESPONSE:
+{
+  "message": "Registration successful",
+  "event": {
+    "id": "b1cbf322-b239-4c97-b3b8-d7f9d6f961b1",
+    "title": "Async Test Event",
+    "date": "2025-05-01",
+    "time": "10:00",
+    "location": "Async City",
+    "capacity": 100,
+    "description": "An event created using async tests",
+    "created_at": "2026-08-09T16:24:31.703459",
+    "user_id": 6,
+    "registered": 1
+  }
+}
+============================================================
+
+============================================================
+TIMESTAMP   : 2026-08-09T16:24:31.743766
+TESTED ROUTE: DELETE /user/events/b1cbf322-b239-4c97-b3b8-d7f9d6f961b1
+>>>>>>> upstream/main
 REQUEST DATA: None
 STATUS CODE : 200
 RESPONSE:

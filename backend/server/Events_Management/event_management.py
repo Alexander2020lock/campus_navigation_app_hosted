@@ -27,10 +27,8 @@ async def list_user_events(
             SELECT events.*, COUNT(registrations.id) as registered
             FROM events
             LEFT JOIN registrations ON events.id = registrations.event_id
-            WHERE events.user_id = ?
             GROUP BY events.id
-            """,
-            (current_user_id,),
+            """
         )
         events = [dict(row) for row in cursor.fetchall()]
     return events
@@ -58,11 +56,6 @@ async def get_user_event(
     if not event:
         raise HTTPException(status_code=404, detail="Event not found")
 
-    if str(event["user_id"]) != current_user_id:
-        raise HTTPException(
-            status_code=403, detail="You don't have permission to access this event"
-        )
-
     return dict(event)
 
 
@@ -74,11 +67,6 @@ async def update_user_event(
     event = get_event_by_id(event_id)
     if not event:
         raise HTTPException(status_code=404, detail="Event not found")
-
-    if str(event["user_id"]) != current_user_id:
-        raise HTTPException(
-            status_code=403, detail="You don't have permission to update this event"
-        )
 
     data = await request.json()
     result = update_event(event_id, data)
@@ -98,11 +86,6 @@ async def delete_user_event(
     if not event:
         raise HTTPException(status_code=404, detail="Event not found")
 
-    if str(event["user_id"]) != current_user_id:
-        raise HTTPException(
-            status_code=403, detail="You don't have permission to delete this event"
-        )
-
     result, status_code = delete_event(event_id)
     return JSONResponse(content=result, status_code=status_code)
 
@@ -115,12 +98,6 @@ async def get_user_event_attendees(
     event = get_event_by_id(event_id)
     if not event:
         raise HTTPException(status_code=404, detail="Event not found")
-
-    if str(event["user_id"]) != current_user_id:
-        raise HTTPException(
-            status_code=403,
-            detail="You don't have permission to view attendees for this event",
-        )
 
     with get_db_connection() as conn:
         cursor = conn.cursor()

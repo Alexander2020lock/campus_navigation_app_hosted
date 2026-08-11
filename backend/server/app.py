@@ -92,7 +92,6 @@ class TeacherData(BaseModel):
     phone_number: Optional[str] = None
 
 
-
 class UserRegister(BaseModel):
     username: str
     password: str
@@ -206,8 +205,9 @@ async def create_teacher(data: TeacherData):
     except DatabaseError as e:
         raise HTTPException(status_code=500, detail=str(e))
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"An unexpected error occurred: {str(e)}")
-
+        raise HTTPException(
+            status_code=500, detail=f"An unexpected error occurred: {str(e)}"
+        )
 
 
 @app.post("/upload")
@@ -255,7 +255,6 @@ async def upload_audio(text: str = Form(None), audio_file: UploadFile = File(Non
     return JSONResponse(
         content={"error": "Invalid response format from processor"}, status_code=400
     )
-
 
 
 @app.get("/search_teacher")

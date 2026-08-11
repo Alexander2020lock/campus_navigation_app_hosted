@@ -72,6 +72,22 @@ function Page() {
             attendee_email: user.email || ''
           });
 
+          // Restore and sync stored event registrations with backend database
+          if (user?.email) {
+            try {
+              const serverRegistrations = await getUserRegistrations(user.email);
+              if (Array.isArray(serverRegistrations)) {
+                const freshSet = new Set(serverRegistrations);
+                setRegisteredEvents(freshSet);
+                if (typeof window !== 'undefined') {
+                  localStorage.setItem(`registered_events_${user.email}`, JSON.stringify(Array.from(freshSet)));
+                }
+              }
+            } catch (err) {
+              console.error("Error syncing registrations from database:", err);
+            }
+          }
+
           // Allow codernavank@gmail.com or @vitbhopal.ac.in emails
           if (!user.email.endsWith('@vitbhopal.ac.in') && user.email !== 'codernavank@gmail.com' && user.email !== 'dakshdugar890@gmail.com') {
             await signOut(auth);
@@ -132,6 +148,19 @@ function Page() {
         try {
           const data = await listEvents();
           setEvents(data);
+
+          // Sync student's live registration state from database
+          const currentUser = auth.currentUser;
+          if (currentUser?.email) {
+            const serverRegistrations = await getUserRegistrations(currentUser.email);
+            if (Array.isArray(serverRegistrations)) {
+              const freshSet = new Set(serverRegistrations);
+              setRegisteredEvents(freshSet);
+              if (typeof window !== 'undefined') {
+                localStorage.setItem(`registered_events_${currentUser.email}`, JSON.stringify(Array.from(freshSet)));
+              }
+            }
+          }
         } catch (error) {
           console.error('Error fetching events:', error);
         } finally {
@@ -221,9 +250,45 @@ function Page() {
     e.preventDefault();
     try {
       const eventId = selectedEvent.id || selectedEvent._id;
-      await registerEvent(eventId, registrationForm);
-      setRegisteredEvents(prev => new Set([...prev, eventId]));
-      setRegisteredEmails(prev => ({ ...prev, [eventId]: registrationForm.attendee_email }));
+      const attendeeName = registrationForm.attendee_name.trim();
+      const attendeeEmail = registrationForm.attendee_email.trim();
+
+      const payload = {
+        attendee_name: attendeeName,
+        attendee_email: attendeeEmail,
+        name: attendeeName,
+        email: attendeeEmail
+      };
+
+      await registerEvent(eventId, payload);
+
+      const currentUser = auth.currentUser;
+      const userEmail = attendeeEmail || currentUser?.email;
+
+      setRegisteredEvents(prev => {
+        const next = new Set([...prev, eventId]);
+        if (typeof window !== 'undefined' && userEmail) {
+          try {
+            localStorage.setItem(`registered_events_${userEmail}`, JSON.stringify(Array.from(next)));
+          } catch (err) {
+            console.error("Error saving registered events to localStorage:", err);
+          }
+        }
+        return next;
+      });
+
+      setRegisteredEmails(prev => {
+        const next = { ...prev, [eventId]: attendeeEmail };
+        if (typeof window !== 'undefined' && userEmail) {
+          try {
+            localStorage.setItem(`registered_emails_${userEmail}`, JSON.stringify(next));
+          } catch (err) {
+            console.error("Error saving registered emails to localStorage:", err);
+          }
+        }
+        return next;
+      });
+
       setShowRegistrationForm(false);
       alert('Successfully registered for the event!');
     } catch (error) {
@@ -247,16 +312,33 @@ function Page() {
         attendee_email: emailToUse,
         email: emailToUse
       });
+
       setRegisteredEvents(prev => {
         const next = new Set(prev);
         next.delete(eventId);
+        if (typeof window !== 'undefined' && emailToUse) {
+          try {
+            localStorage.setItem(`registered_events_${emailToUse}`, JSON.stringify(Array.from(next)));
+          } catch (err) {
+            console.error("Error updating localStorage after cancellation:", err);
+          }
+        }
         return next;
       });
+
       setRegisteredEmails(prev => {
         const next = { ...prev };
         delete next[eventId];
+        if (typeof window !== 'undefined' && emailToUse) {
+          try {
+            localStorage.setItem(`registered_emails_${emailToUse}`, JSON.stringify(next));
+          } catch (err) {
+            console.error("Error updating localStorage after cancellation:", err);
+          }
+        }
         return next;
       });
+
       alert('Registration cancelled successfully.');
     } catch (error) {
       console.error('Error cancelling registration:', error);
