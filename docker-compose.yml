@@ -5,7 +5,7 @@ services:
       dockerfile: Dockerfile
     container_name: campus-navigation-backend
     env_file:
-      - ./backend/.env.docker
+      - ./backend/.env
     ports:
       - "8000:8000"
     restart: unless-stopped

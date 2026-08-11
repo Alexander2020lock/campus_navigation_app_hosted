@@ -69,6 +69,17 @@ export async function listEvents() {
 }
 
 /**
+ * Get active registration event IDs for a given attendee email (GET /events/user-registrations?email=...)
+ */
+export async function getUserRegistrations(email) {
+  if (!email) return [];
+  const params = new URLSearchParams({ email });
+  const res = await fetchApi(`/events/user-registrations?${params.toString()}`);
+  if (!res.ok) return [];
+  return await res.json();
+}
+
+/**
  * Get details for a specific event (GET /events/{event_id})
  */
 export async function getEvent(eventId) {

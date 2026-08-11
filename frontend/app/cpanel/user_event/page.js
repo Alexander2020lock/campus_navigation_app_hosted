@@ -15,6 +15,8 @@ function Page() {
   const [isLoadingAttendees, setIsLoadingAttendees] = useState(false);
   const router = useRouter();
 
+  const [attendeeError, setAttendeeError] = useState(null);
+
   useEffect(() => {
     fetchEvents();
   }, []);
@@ -34,14 +36,22 @@ function Page() {
 
   // Function to fetch attendees for a specific event
   const fetchAttendees = async (eventId) => {
+    if (selectedEvent === eventId) {
+      setSelectedEvent(null);
+      return;
+    }
     setIsLoadingAttendees(true);
+    setAttendeeError(null);
     try {
       const data = await getUserEventAttendees(eventId);
-      setAttendees(data);
+      console.log("Attendees data received:", data);
+      const list = Array.isArray(data) ? data : (data?.attendees || data?.data || []);
+      setAttendees(list);
       setSelectedEvent(eventId);
     } catch (error) {
       console.error('Error fetching attendees:', error);
-      alert(error.message);
+      setAttendeeError(error.message);
+      setSelectedEvent(eventId);
     } finally {
       setIsLoadingAttendees(false);
     }
@@ -107,7 +117,7 @@ function Page() {
           {events.map((event) => {
             const eventId = event.id || event._id;
             return (
-              <div key={eventId} className="bg-white p-4 rounded-lg shadow-md relative">
+              <div key={eventId} className="bg-white p-4 rounded-lg shadow-md relative border border-gray-100">
                 <button
                   onClick={() => handleDelete(eventId)}
                   className="absolute top-4 right-4 p-2 text-red-500 hover:text-red-700 hover:bg-red-50 rounded-full transition-colors"
@@ -119,7 +129,12 @@ function Page() {
                   className="cursor-pointer"
                   onClick={() => fetchAttendees(eventId)}
                 >
-                  <h2 className="text-xl font-semibold mb-2 pr-8">{event.title}</h2>
+                  <div className="flex items-center justify-between pr-10">
+                    <h2 className="text-xl font-semibold mb-2">{event.title}</h2>
+                    <span className="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded-full">
+                      Registered: {event.registered ?? 0} / {event.capacity}
+                    </span>
+                  </div>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <p className="text-gray-600">Date: {event.date}</p>
@@ -133,6 +148,9 @@ function Page() {
                     </div>
                   </div>
                   <p className="mt-2 text-gray-700">{event.description}</p>
+                  <p className="text-xs text-blue-600 font-medium mt-2">
+                    {selectedEvent === eventId ? "▲ Hide Attendees" : "▼ Click to View Attendees"}
+                  </p>
                 </div>
 
                 {/* Attendees Section */}
@@ -140,31 +158,36 @@ function Page() {
                   <div className="mt-4 border-t pt-4">
                     <h3 className="font-semibold mb-2">Attendees</h3>
                     {isLoadingAttendees ? (
-                      <div className="flex justify-center">
+                      <div className="flex justify-center py-4">
                         <div className="animate-spin rounded-full h-6 w-6 border-t-2 border-blue-500"></div>
                       </div>
+                    ) : attendeeError ? (
+                      <p className="text-red-500 text-sm font-semibold">{attendeeError}</p>
                     ) : attendees.length > 0 ? (
                       <div className="overflow-x-auto">
-                        <table className="min-w-full">
+                        <table className="min-w-full divide-y divide-gray-200">
                           <thead>
-                            <tr>
-                              <th className="py-2 px-4 border-b text-left">Name</th>
-                              <th className="py-2 px-4 border-b text-left">Email</th>
-                              <th className="py-2 px-4 border-b text-left">Registration Date</th>
-                              <th className="py-2 px-4 border-b text-center">Action</th>
+                            <tr className="bg-gray-50">
+                              <th className="py-2 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Name</th>
+                              <th className="py-2 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
+                              <th className="py-2 px-4 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Registration Date</th>
+                              <th className="py-2 px-4 text-center text-xs font-medium text-gray-500 uppercase tracking-wider">Action</th>
                             </tr>
                           </thead>
-                          <tbody>
+                          <tbody className="bg-white divide-y divide-gray-200">
                             {attendees.map((attendee, index) => {
                               const attendeeId = attendee.id || attendee.attendee_id || index;
                               return (
                                 <tr key={index} className="hover:bg-gray-50">
-                                  <td className="py-2 px-4 border-b">{attendee.attendee_name || attendee.name || 'N/A'}</td>
-                                  <td className="py-2 px-4 border-b">{attendee.attendee_email || attendee.email || 'N/A'}</td>
-                                  <td className="py-2 px-4 border-b">{attendee.registration_date ? new Date(attendee.registration_date).toLocaleDateString() : 'N/A'}</td>
+                                  <td className="py-2 px-4 border-b font-medium">{attendee.attendee_name || attendee.name || 'N/A'}</td>
+                                  <td className="py-2 px-4 border-b text-gray-600">{attendee.attendee_email || attendee.email || 'N/A'}</td>
+                                  <td className="py-2 px-4 border-b text-gray-600">{attendee.registration_date ? new Date(attendee.registration_date).toLocaleDateString() : 'N/A'}</td>
                                   <td className="py-2 px-4 border-b text-center">
                                     <button
-                                      onClick={() => handleDeleteAttendee(eventId, attendeeId)}
+                                      onClick={(e) => {
+                                        e.stopPropagation();
+                                        handleDeleteAttendee(eventId, attendeeId);
+                                      }}
                                       className="p-1 text-red-500 hover:text-red-700 hover:bg-red-50 rounded transition-colors"
                                       title="Remove attendee"
                                     >
@@ -178,7 +201,7 @@ function Page() {
                         </table>
                       </div>
                     ) : (
-                      <p className="text-gray-500">No attendees found for this event.</p>
+                      <p className="text-gray-500 py-2">No attendees registered for this event yet.</p>
                     )}
                   </div>
                 )}

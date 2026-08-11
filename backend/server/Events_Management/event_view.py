@@ -29,6 +29,18 @@ async def list_events() -> list[dict[str, Any]]:
     return events
 
 
+@events_router.get("/user-registrations")
+async def get_user_registrations(email: str) -> list[str]:
+    if not email:
+        return []
+    with get_db_connection() as conn:
+        cursor = conn.cursor()
+        cursor.execute(
+            "SELECT event_id FROM registrations WHERE attendee_email = ?", (email,)
+        )
+        return [row["event_id"] for row in cursor.fetchall()]
+
+
 @events_router.get("/{event_id}")
 async def get_event_route(event_id: str) -> dict[str, Any]:
 
